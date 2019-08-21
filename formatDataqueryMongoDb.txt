@@ -1,0 +1,29 @@
+
+
+Country name from ISO 3166
+https://datahub.io/core/country-list
+http://docs.cntd.ru/document/842501075
+
+В Java имеется удобный класс SimpleDateFormat, который можно использовать для форматирования даты
+
+EEE формат дня недели
+
+yy	год (последние 2 цифры)	12
+yyyy	год (4-х значное число)	2012
+M	номер месяца без лидирующих нулей	2
+MM	номер месяца (с лидирующими нулями если номер месяца < 10)	02
+MMM	четырех буквенное сокращение месяца в русской локализации и трех буквенное - в английской (Feb)	фев
+MMMM	полное название месяца (в английской локализации - February)	Февраль
+пример 
+
+EEE, d MMM yyyy	Вт, 7 фев 2012
+EEE, d MMM yyyy	Tue, 7 Feb 2012
+
+
+					sql										mongodb
+					
+SELECT * FROM users  WHERE name= "ivan"				db.users.find({name: "ivan"})
+													db.users.find({name: "ivan"}).counter()
+					
+					
+SELECT * FROM users  WHERE name LIKE '%m%'			db.users.find({name: /m/})
